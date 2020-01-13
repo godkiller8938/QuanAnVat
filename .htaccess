@@ -1,0 +1,35 @@
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://kyquan.000webhostapp.com/$1 [R=301,L]
+#rewrite url: index.php
+RewriteRule ^trang-chu$ index.php
+RewriteRule ^admin$ admin.php
+RewriteRule ^gio-hang$ index.php?controller=cart
+RewriteRule ^tin-tuc$ index.php?controller=news
+RewriteRule ^lien-he$ index.php?controller=contact
+RewriteRule ^mon-an$ index.php?controller=category_food
+RewriteRule ^do-uong$ index.php?controller=category_drink
+RewriteRule ^banh-ngot$ index.php?controller=category_bakery
+RewriteRule ^khach-hang$ index.php?controller=customer
+RewriteRule ^thong-tin-khach-hang$ index.php?controller=customer&act=add
+RewriteRule ^dat-hang$ index.php?controller=customer_detail
+RewriteRule ^don-hang$ index.php?controller=order
+RewriteRule ^tim-kiem$ index.php?controller=search
+RewriteRule ^trang-chu/(.*)$ index.php?controller=home&id=$2
+RewriteRule ^mon-an/(.*)-(.*)$ index.php?controller=category_food&id_category=$2
+RewriteRule ^do-uong/(.*)-(.*)$ index.php?controller=category_drink&id_category=$2
+RewriteRule ^banh-ngot/(.*)-(.*)$ index.php?controller=category_bakery&id_category=$2
+RewriteRule ^sua-gio-hang$ index.php?controller=cart&act=edit
+RewriteRule ^cap-nhat-don-hang$ index.php?controller=cart&act=update
+RewriteRule ^xoa-toan-bo$ index.php?controller=cart&act=destroy
+RewriteRule ^xoa-(.*)$ index.php?controller=cart&act=delete&id=$1
+RewriteRule ^tim-kiem/(.*)$ index.php?controller=search&p=$1
+
+
+
+
+
+
+# HTID:8131452: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
+Redirect 301 /hi https://google.com
+# DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:8131452:
